@@ -56,7 +56,7 @@ function About() {
           </div>
 
           <div className="about__img-wrap">
-            <img src="/Public/me.jpg" alt="Clivia" className="about__img" />
+            <img src="/public/me.jpg" alt="Me" className="about__img" />
             <div className="about__img-border" />
           </div>
         </div>
