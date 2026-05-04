@@ -1,0 +1,102 @@
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: var(--bg-2);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.25s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--green-border), transparent);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover {
+  border-color: var(--green-border);
+  transform: translateY(-4px);
+}
+
+.project-card:hover::before { transform: scaleX(1); }
+
+.project-card--featured {
+  border-color: var(--green-border);
+  box-shadow: 0 0 30px rgba(0,255,136,0.04);
+}
+
+.project-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-card__id { font-size: 0.75rem; opacity: 0.6; }
+
+.project-card__badge {
+  font-size: 0.65rem;
+  color: var(--green);
+  background: var(--green-muted);
+  border: 1px solid var(--green-border);
+  padding: 0.15rem 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.project-card__name {
+  font-family: var(--display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.project-card__desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+.tag {
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 0.2rem 0.5rem;
+  letter-spacing: 0.04em;
+}
+
+.project-card__links {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.project-link {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+.project-link:hover { color: var(--text); }
+.project-link.green { color: var(--green); }
+.project-link.green:hover { color: var(--green-dim); }
