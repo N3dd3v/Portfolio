@@ -27,7 +27,7 @@ function About() {
           </p>
 
           <div className="about__links">
-            <a href="/public/Resume-7.pdf" className="btn-primary" download>Download CV</a>
+            <a href="/Resume-7.pdf" className="btn-primary" download>Download CV</a>
           </div>
         </div>
 
@@ -56,7 +56,7 @@ function About() {
           </div>
 
           <div className="about__img-wrap">
-            <img src="/public/me.jpg" alt="Me" className="about__img" />
+            <img src="/me.jpg" alt="Me" className="about__img" />
             <div className="about__img-border" />
           </div>
         </div>
